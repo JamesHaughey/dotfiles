@@ -1,0 +1,1 @@
+cp /mnt/c/cmder/vendor/conemu-maximus5/ConEmu.xml /mnt/c/projects/dotfiles/cmder/ConEmu.xml
