@@ -82,7 +82,11 @@ plugins=(
   python
   ansible
   github
-  aws 
+  aws
+  dotenv
+  last-working-dir
+  sudo
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
