@@ -1,44 +1,22 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/tiago/.oh-my-zsh"
 
+export PIPENV_VENV_IN_PROJECT=true
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="bullet-train"
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon time virtualenv dir vcs)
-# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(icons_test)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history date)
-
-POWERLEVEL9K_VIRTUALENV_FOREGROUND='white'
-POWERLEVEL9K_VIRTUALENV_BACKGROUND='cyan'
-
-POWERLEVEL9K_OS_ICON_FOREGROUND='white'
-POWERLEVEL9K_OS_ICON_BACKGROUND='grey27'
-POWERLEVEL9K_STATUS_OK_BACKGROUND='grey27'
-POWERLEVEL9K_HISTORY_FOREGROUND='white'
-POWERLEVEL9K_HISTORY_BACKGROUND='blue'
-
-POWERLEVEL9K_DIR_HOME_FOREGROUND='white'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='white'
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='white'
-
-
-POWERLEVEL9K_HOST_LOCAL_FOREGROUND='white'
-POWERLEVEL9K_HOST_LOCAL_BACKGROUND='black'
-
-VIRTUAL_ENV_DISABLE_PROMPT=1
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-PATH="$PATH:/mnt/c/Users/James/AppData/Local/Programs/Microsoft VS Code/bin"
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -98,9 +76,16 @@ PATH="$PATH:/mnt/c/Users/James/AppData/Local/Programs/Microsoft VS Code/bin"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  python
+  ansible
+  github
+  aws 
+)
 
 source $ZSH/oh-my-zsh.sh
+source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration
 
@@ -127,3 +112,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
