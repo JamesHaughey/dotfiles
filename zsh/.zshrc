@@ -9,7 +9,8 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/tiago/.oh-my-zsh"
+export username=tiago
+export ZSH="/home/${username}/.oh-my-zsh"
 
 export PIPENV_VENV_IN_PROJECT=true
 # Set name of the theme to load --- if set to "random", it will
@@ -85,7 +86,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/${username}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration
 
