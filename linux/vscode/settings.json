@@ -1,0 +1,10 @@
+{
+    "editor.fontFamily": "'DroidSansMono Nerd Font Book', 'monospace', monospace, 'Droid Sans Fallback'",
+    "terminal.integrated.fontFamily": "'MesloLGS NF'",
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Bear Theme",
+    "explorer.confirmDragAndDrop": false
+}

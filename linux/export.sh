@@ -1,3 +1,7 @@
 # Copy .zshrc file
-cp ./.zshrc ~/.zshrc
-cp ./.p10k.zsh ~/.p10k.zsh
+cp ./zsh/.zshrc ~/.zshrc
+cp ./zsh/.p10k.zsh ~/.p10k.zsh
+
+# Copy VS Code files
+cp ./vscode/settings.json ~/.config/Code/User/
+cp ./vscode/keybindings.json ~/.config/Code/User/
