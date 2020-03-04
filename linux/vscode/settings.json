@@ -6,5 +6,12 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Bear Theme",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#2b6cae",
+        "activityBar.activeBorder": "#2b6cae",
+        "statusBar.background": "#2b6cae",
+        "terminal.foreground": "#fdf6e3",
+        "terminal.background": "#1f2023"
+    }
     "explorer.confirmDragAndDrop": false
 }
